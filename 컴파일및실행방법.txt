@@ -1,0 +1,15 @@
+<c>
+gcc eratos.c -o eratos
+eratos.exe
+
+<java>
+javac Eratos.java
+한글 인코딩 : -encoding=ms949 또는 -encoding=UTF8
+java Eratos
+
+<python>
+py eratos.py (2.x)
+python eratos.py (3.x)
+
+<javascript>
+node eratos.js

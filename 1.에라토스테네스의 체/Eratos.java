@@ -20,6 +20,7 @@ public class Eratos {
 
     public static void getEratos(int max) {
         boolean[] a = new boolean[max];
+
         for (int i = 2; i < max; i++) 
             a[i] = true;
             

@@ -1,0 +1,19 @@
+배열 선언 방법 : 
+<c>
+int list[3];
+OR
+int *list;
+list = (int *) malloc(sizeof(int) * num);
+
+<java>
+int[] list = new int[num];
+
+<python>
+list = {} : 숫자가 아닌 index 가능
+OR
+list = [] : append, insert로 추가해야됨.
+OR
+list = () : 튜플, 변경 불가능
+
+<javascript>
+var list = [];
