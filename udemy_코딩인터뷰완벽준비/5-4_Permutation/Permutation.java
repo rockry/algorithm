@@ -2,17 +2,13 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Permutation {
+    static int count1 = 0;
+    static int count2 = 0;
 	public static List<String> getPermutations2(String s) {
 		return permRec2(s, new boolean[s.length()], "", new ArrayList<String>());
 	}
 	
 	private static List<String> permRec2(String s, boolean[] pick, String perm, List<String> result) {
-        System.out.println("perm=" + perm);
-        System.out.print("pick=");
-        for(int i=0;i<3;i++){
-            System.out.print(" " + pick[i]);
-        }
-        System.out.println("");
 	    if(perm.length() == s.length()) {
 	        result.add(perm);
 	        return result;
@@ -40,19 +36,22 @@ public class Permutation {
 	        return result;
 	    } else {
 	        for(int j = i; j < n; j++) {
-	            char temp;
-	            temp = cl[i];
-	            cl[i] = cl[j];
-	            cl[j] = temp;
+	            swap(cl, i, j);
 	            permRec(cl, i + 1, result);
-	            temp = cl[i];
-	            cl[i] = cl[j];
-	            cl[j] = temp;	            
+                swap(cl, i, j);
 	        }
 	    }
 	    return result;
 	}
+    private static void swap(char[] cl, int i, int j) {
+        char temp;
+        temp = cl[i];
+        cl[i] = cl[j];
+        cl[j] = temp;
+    }
+    
     public static void main(String[] args) {
-        Permutation.getPermutations2("abc");
+        System.out.println(Permutation.getPermutations2("abc").toString());
+        System.out.println(Permutation.getPermutations("abc").toString());
     }
 }
