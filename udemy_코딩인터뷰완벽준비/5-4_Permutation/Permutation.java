@@ -7,6 +7,12 @@ public class Permutation {
 	}
 	
 	private static List<String> permRec2(String s, boolean[] pick, String perm, List<String> result) {
+        System.out.println("perm=" + perm);
+        System.out.print("pick=");
+        for(int i=0;i<3;i++){
+            System.out.print(" " + pick[i]);
+        }
+        System.out.println("");
 	    if(perm.length() == s.length()) {
 	        result.add(perm);
 	        return result;
@@ -46,4 +52,7 @@ public class Permutation {
 	    }
 	    return result;
 	}
+    public static void main(String[] args) {
+        Permutation.getPermutations2("abc");
+    }
 }
