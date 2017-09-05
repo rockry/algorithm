@@ -9,6 +9,7 @@ public class Permutation {
 	}
 	
 	private static List<String> permRec2(String s, boolean[] pick, String perm, List<String> result) {
+        System.out.println("count1="+ count1++);
 	    if(perm.length() == s.length()) {
 	        result.add(perm);
 	        return result;
@@ -30,6 +31,7 @@ public class Permutation {
 	    return permRec(charList, 0, new ArrayList<String>());
 	}
 	private static List<String> permRec(char[] cl, int i, List<String> result) {
+        System.out.println("count2=" + count2++);
 	    int n = cl.length;
 	    if(i == n -1) {
 	        result.add(new String(cl));

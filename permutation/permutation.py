@@ -16,7 +16,7 @@ def perm(input, i):
         print(input)
     else:
         for j in range(i, n): # (n - i)반복
-            input[i], input[j] = input[j], input[i] #이번 회기의 첫원소(아직 확정되지 않은 원소)와 다음원소들(j)을 하나씩 교환 
+            input[i], input[j] = input[j], input[i] #이번 회기의 첫원소(아직 확정되지 않은 원소)와 다음원소들(j)을 하나씩 교환, i는 다음번 회기에 확정된 원소 (!)i~n 중 하나씩을 선택해서 다음 회기로 간다고 보면됨.(!)
             # print("i=", i," j=",j)
             perm(input, i + 1) # 다음번 회기는 i+1부터 n까지 즉 (n-i)번 for문을 반복한다.
             input[i], input[j] = input[j], input[i] # 원래대로 복구
