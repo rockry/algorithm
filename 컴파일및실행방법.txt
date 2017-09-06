@@ -4,7 +4,7 @@ eratos.exe
 
 <java>
 javac Eratos.java
-한글 인코딩 : -encoding=ms949 또는 -encoding=UTF8
+한글 인코딩 : 		javac -encoding UTF8 Test.java 또는 -encoding ms949 
 java Eratos
 
 <python>
