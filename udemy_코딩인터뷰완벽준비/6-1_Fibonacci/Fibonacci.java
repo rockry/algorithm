@@ -41,7 +41,6 @@ public class Fibonacci {
         long start2 = System.currentTimeMillis();
         System.out.println(Fibonacci.fibonacciFaster(Integer.parseInt(args[0])));
         long end2 = System.currentTimeMillis();
-        System.out.println( "<elapsed time> : " + ( end2 - start2 )/1000.0 ); 		
-		
+        System.out.println( "<elapsed time> : " + ( end2 - start2 )/1000.0 );
 	}
 }
