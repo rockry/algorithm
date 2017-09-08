@@ -95,6 +95,32 @@ public class MyList {
         
         return n2;
     }
+    
+    public boolean isPalindrome() {
+        Node n1 = head;
+        Node n2 = head;
+        Stack<Integer> stack = new Stack<>();
+        
+        while (n2 != null && n2.next != null) {
+            stack.push(n1.data);
+            n1 = n1.next;
+            n2 = n2.next.next;
+        }
+        
+        // n2가 not null이면 홀수라는 의미 => 중간값을 skip
+        if (n2 != null) {
+            n1 = n1.next;
+        }
+        
+        while (n1 != null) {
+            if (stack.pop() != n1.data) {
+                return false;
+            } else {
+                n1 = n1.next;
+            }
+        }
+        return true;
+    }
  
     @Override
     public String toString() {
