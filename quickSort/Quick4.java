@@ -31,7 +31,8 @@ public class Quick4 {
                 }
             }
             printArray(arr, i, j, left, right, pivot);
-            swap(arr, left, j);
+            if(arr[left] > arr[j])
+                swap(arr, left, j);
             printArray(arr, i, j, left, right, pivot);
             
             quick_hoare(arr, left, j - 1);
@@ -47,7 +48,8 @@ public class Quick4 {
     
     public static void main(String[] args) {
         //int data[] = {66, 10, 1, 34, 5, -10, 8, 9};
-		int data[] = {9,3,8,5,2,1,6,4};
+		// int data[] = {9,3,8,5,2,1,6,4};
+        int data[] = {3,4,9};
         
         Quick4 quick = new Quick4();
         quick.quick_hoare(data, 0, data.length - 1);
