@@ -49,11 +49,11 @@ public class MyList {
         Node next = null;
         
         while(node != null) {
-            next = node.next;
-            node.next = prev;
-            prev = node;
-            node = next;
-        }
+            next = node.next;   // 다음 node를 미리 load
+            node.next = prev;   // node.next에 이전 node를 attach
+            prev = node;        // prev에 현재 노드를 대입
+            node = next;        // node = 다음 노드
+        }                       // 1 - (2) - 3 => next = 3, node.next = 1, prev = 2(next는 1), node = 3
         head = prev;
     }
 
