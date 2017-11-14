@@ -43,7 +43,8 @@ public class Quick3 {
     public static void main(String[] args) {
         //int data[] = {66, 10, 1, 34, 5, -10, 8, 9};
 		// int data[] = {9,3,8,5,2,1,6,11,4};
-		int data[] = {9, 3};
+		// int data[] = {9, 3};
+		int data[] = {9,8,1,5,4,15,6,7};
         
         Quick3 quick = new Quick3();
         quick.sort(data, 0, data.length - 1);
